@@ -1,0 +1,49 @@
+extends common/demo-layout.pug
+
+block meta
+    title Demo
+    meta(name='description', content='')
+
+block head
+    link(rel='stylesheet', href='css/demo-style.min.css')
+
+
+block content
+    include blocks/demo-page/hero/hero.pug
+
+    section.content
+        .box
+            .subtitle Lorem
+            h2.title.title--color Lorem ipsum dolor sit amet.
+            .descr
+                p Laborum nesciunt dolore doloremque unde, quaerat ut, deserunt hic quidem maiores ab nisi aliquam, quae error reiciendis corporis.
+
+    section.content.content--dark-bg
+        .box
+            include blocks/demo-page/features/features.pug
+
+    section.content.content--light-bg
+        .box
+            .content__inner
+                .subtitle Lorem
+                h2.title.title--color Lorem ipsum dolor sit amet.
+
+            include blocks/demo-page/tabs/tabs.pug
+
+    section.content
+        .box
+            .subtitle Lorem
+            h2.title.title--color Lorem ipsum dolor sit amet.
+            .descr
+                p Laborum nesciunt dolore doloremque unde, quaerat ut, deserunt hic quidem maiores ab nisi aliquam, quae error reiciendis corporis.
+            include blocks/demo-page/picture/picture.pug
+
+    section.content
+        .box
+            .subtitle News
+            h2.title Latest news and Events
+
+            include blocks/demo-page/article/article.pug
+
+block append page-bottom
+    include blocks/demo-page/modal/modal.pug

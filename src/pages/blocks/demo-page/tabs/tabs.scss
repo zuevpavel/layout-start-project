@@ -1,0 +1,43 @@
+.tabs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, auto));
+    gap: 10px;
+}
+
+.tabs__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    background-color: $white;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border 0.3s;
+
+    &:hover {
+        border-color: $green;
+    }
+
+    &--active {
+        color: $text-light-color;
+        background-color: $green;
+        cursor: initial;
+    }
+}
+
+.tabs-content-wrap {
+    padding: 40px 0;
+}
+
+.tabs-content {
+    display: none;
+
+    &--show {
+        display: block;
+    }
+}

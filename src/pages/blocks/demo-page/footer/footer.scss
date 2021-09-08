@@ -1,0 +1,88 @@
+.footer {
+    $block-name: &; // #{$block-name}__element
+
+    padding: 20px 0;
+    background: linear-gradient(256.5deg, #114e4f -9.93%, #040430 101.56%);
+
+    &__row {
+        display: grid;
+        margin: 15px 0;
+
+        @include media-up--L {
+            grid-template-columns: 1fr 2fr;
+        }
+    }
+
+    &__social {
+        margin: 20px 0;
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: 17px;
+        color: rgba($text-light-color, 0.4);
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+
+        @include media-up--S {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @include media-up--L {
+            justify-items: flex-end;
+        }
+    }
+
+    &__list {
+        display: grid;
+        gap: 10px;
+    }
+
+    &__list-item {
+        font-size: 14px;
+        line-height: 17px;
+        color: rgba($text-light-color, 0.6);
+    }
+
+    &__list-link:hover {
+        color: $menu-link--hover;
+    }
+
+    &__list-title {
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: $text-light-color;
+    }
+
+    &__bottom {
+        padding-top: 30px;
+        font-size: 14px;
+        line-height: 17px;
+        border-top: 0.5px solid rgba($white, 0.15);
+
+        @include media-up--S {
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+        }
+    }
+
+    &__date {
+        margin-bottom: 10px;
+        color: rgba($text-light-color, 0.4);
+
+        @include media-up--S {
+            margin-bottom: 0;
+        }
+    }
+
+    &__copy {
+        color: rgba($text-light-color, 0.4);
+    }
+}

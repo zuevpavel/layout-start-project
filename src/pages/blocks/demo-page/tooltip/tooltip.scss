@@ -1,0 +1,42 @@
+.tooltip {
+    $block-name: &; // #{$block-name}__element
+
+    padding: 0 5px;
+    position: relative;
+    cursor: pointer;
+
+    &:hover #{$block-name}__text {
+        opacity: 1;
+        visibility: visible;
+        transform: scaleY(1);
+    }
+
+    &__icon {
+        margin-top: -2px;
+        border: 1px solid rgba($text-primary-color, 0.5);
+        border-radius: 50%;
+    }
+
+    &__text {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+        position: absolute;
+        top: 25px;
+        right: 0;
+        padding: 10px;
+        width: 200px;
+        max-height: 300px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.2;
+        color: rgba($text-primary-color, 1);
+        background-color: rgba(var(--dropdown-bg-color), 1);
+        border: 1px solid rgba($bg-secondary-color, 1);
+        border-radius: 10px;
+        z-index: 2;
+        transform-origin: top;
+        transition: all 0.3s;
+        overflow: auto;
+    }
+}
